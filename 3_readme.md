@@ -1,60 +1,47 @@
-# UK Unemployment Rate data exploration
-run pip install -i 3_requirement.txt first and then run python 1_data.py, we can get prepared data and pictures.
+[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=18392968)
 
+# Unemployment Insight Hub
 
-# UK Unemployment Rate Database System
-
-## Overview
-This project is a Python-based database system designed to manage and analyze unemployment rate data in the UK. The system supports importing and querying unemployment rate data categorized by gender and region.
-
-## Data Structure
-The system includes the following main tables:
-- TimePeriod: Time period information
-- Gender: Gender categories
-- Region: Regional categories
-- UnemploymentRateByGender: Unemployment rates by gender
-- UnemploymentRateByRegion: Unemployment rates by region
+A dynamic web application built with Dash that visualizes unemployment trends across different dimensions including gender, regional distribution, and London-specific analysis.
 
 ## Features
-- Automatic SQLite database creation
-- CSV data import functionality
-- Gender-based unemployment rate analysis
-- Region-based unemployment rate analysis
-- Data integrity checks and error handling
 
-## Usage
-1. Ensure Python and required packages are installed:
-pip install pandas sqlite3
+- Gender-based unemployment analysis
+- Regional unemployment comparisons
+- London-specific unemployment trends
+- Trend comparison tools
+- Interactive navigation
+- Responsive design
 
-2. Prepare data files:
-- q1_gender.csv: Contains gender-based unemployment data
-- q2_region.csv: Contains region-based unemployment data
+## Installation
 
-3. Run the program:
-python 2_create_database.py
+1. Clone the repository:
 
-## Database Schema
-### Table Structures
-1. TimePeriod Table
-   - PeriodID (Primary Key)
-   - PeriodName
+```bash
+git clone https://github.com/yourusername/unemployment-insight-hub.git
 
-2. Gender Table
-   - GenderID (Primary Key)
-   - GenderName
+```
 
-3. Region Table
-   - RegionID (Primary Key)
-   - RegionName
+2. Install dependencies:
 
-4. UnemploymentRateByGender Table
-   - ID (Primary Key)
-   - PeriodID (Foreign Key)
-   - GenderID (Foreign Key)
-   - Rate
+```bash
+pip install -e ".[dev]"
+```
 
-5. UnemploymentRateByRegion Table
-   - ID (Primary Key)
-   - PeriodID (Foreign Key)
-   - RegionID (Foreign Key)
-   - Rate
+3. Open your web browser and navigate to `http://localhost:8050`
+
+## Data Structure
+
+The application uses an SQLite database with the following tables:
+- `gender_unemployment`: Gender-based unemployment rates by year
+- `UnemploymentRateByRegion`: Regional unemployment rates
+- `TimePeriod`: Time period reference data
+- `Region`: Region reference data
+
+## Development
+
+To set up the development environment:
+
+```bash
+pip install -r requirements.txt
+```
